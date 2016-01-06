@@ -9,5 +9,5 @@ NV_DOCKER ?= docker
 
 all:
 	for name in ${CUDA_SAMPLES}; do \
-	    docker build -t sample:$$name $$name ; \
+	    $(NV_DOCKER) build -t sample:$$name $$name ; \
 	done
